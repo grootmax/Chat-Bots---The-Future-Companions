@@ -1,0 +1,148 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:100,400';
+ body {
+	 overflow: hidden;
+	 background: #083d77;
+	 font-size: 10px;
+}
+ .scene {
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: rotateX(-10deg) rotateY(-10deg);
+	 transform-style: preserve-3d;
+}
+ .airplane-container {
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 width: 200px;
+	 height: 50px;
+	 transform-style: preserve-3d;
+	 transform: perspective(5000px) translate3D(-50%, -50%, 250px);
+}
+ .airplane-rotate-y {
+	 width: 200px;
+	 height: 50px;
+	 animation: 8s rotate-y infinite linear;
+	 transform-style: preserve-3d;
+	 transform-origin: top center;
+}
+ @keyframes rotate-y {
+	 from {
+		 transform: perspective(5000px) rotateY(0deg);
+	}
+	 to {
+		 transform: perspective(5000px) rotateY(360deg);
+	}
+}
+ .airplane-rotate-z {
+	 width: 200px;
+	 height: 50px;
+	 animation: 4s rotate-z infinite ease-in-out;
+	 transform-style: preserve-3d;
+	 transform-origin: top center;
+}
+ @keyframes rotate-z {
+	 0%, 50%, 100% {
+		 animation-timing-function: ease-out;
+		 transform: perspective(5000px) rotateZ(0deg);
+	}
+	 25% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateZ(20deg);
+	}
+	 75% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateZ(-20deg);
+	}
+}
+ .airplane-translate-x {
+	 width: 200px;
+	 height: 50px;
+	 animation: 4s translate-x infinite ease-in-out alternate;
+	 animation-delay: -2s;
+	 transform-style: preserve-3d;
+	 transform-origin: top center;
+}
+ @keyframes translate-x {
+	 from {
+		 transform: perspective(5000px) translateX(-25vw);
+	}
+	 to {
+		 transform: perspective(5000px) translateX(25vw);
+	}
+}
+ .airplane-translate-y {
+	 transform-style: preserve-3d;
+	 animation: 2s translate-y infinite ease-in-out alternate;
+}
+ @keyframes translate-y {
+	 from {
+		 transform: perspective(5000px) translateY(-75px);
+	}
+	 to {
+		 transform: perspective(5000px) translateY(75px);
+	}
+}
+ .airplane-translate-z {
+	 transform-style: preserve-3d;
+	 animation: 4s translate-z infinite ease-in-out alternate;
+}
+ @keyframes translate-z {
+	 from {
+		 transform: perspective(5000px) translateZ(25vw);
+	}
+	 to {
+		 transform: perspective(5000px) translateZ(-25vw);
+	}
+}
+ .part {
+	 position: absolute;
+	 background: transparent;
+	 transform-style: preserve-3d;
+	 transform-origin: top right;
+	 width: 200px;
+	 height: 50px;
+	 color: #ffffff;
+}
+ .left-wing {
+	 transform: rotateX(-75deg);
+	 animation: 0.8s flap-left infinite;
+}
+ .right-wing {
+	 transform: rotateX(75deg);
+	 animation: 0.8s flap-right infinite;
+}
+ @keyframes flap-right {
+	 0%, 100% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateX(60deg);
+	}
+	 25%, 75% {
+		 animation-timing-function: ease-out;
+		 transform: perspective(5000px) rotateX(90deg);
+	}
+	 50% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateX(120deg);
+	}
+}
+ @keyframes flap-left {
+	 0%, 100% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateX(-60deg);
+	}
+	 25%, 75% {
+		 animation-timing-function: ease-out;
+		 transform: perspective(5000px) rotateX(-90deg);
+	}
+	 50% {
+		 animation-timing-function: ease-in;
+		 transform: perspective(5000px) rotateX(-120deg);
+	}
+}
+ .social {
+	 width: 2rem;
+	 height: 2rem;
+}
+ 
