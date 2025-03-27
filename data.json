@@ -1,1 +1,14 @@
-{}
+[
+  {
+    "question": "hello",
+    "answer": "Hello there!"
+  },
+  {
+    "question": "goodbye",
+    "answer": "Talk to you later!"
+  },
+  {
+    "question": "how are you?",
+    "answer": "I'm doing well, thank you!"
+  }
+]
